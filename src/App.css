@@ -1,0 +1,25 @@
+.App {
+    height:100vh;
+
+    /* fallback in case gradient fails */
+    background: #0A3D44;
+
+    /* IE10+ */
+    background-image: -ms-linear-gradient(top, #0A3D44 0%, #178c9b 100%);
+
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(top, #0A3D44 0%, #178c9b 100%);
+
+    /* Opera */
+    background-image: -o-linear-gradient(top, #0A3D44 0%, #178c9b 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0A3D44), color-stop(100, #178c9b));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(top, #0A3D44 0%, #178c9b 100%);
+    
+    /* W3C Markup */
+    background-image: linear-gradient(to bottom, #0A3D44 0%, #11646f 100%);
+    
+}

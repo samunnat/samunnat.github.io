@@ -14,7 +14,7 @@ class App extends Component {
     this.setState({
       projects: [
         {
-          title: 'JavaScript Chesss',
+          title: 'JavaScript Chess',
           category: 'Web Design'
         },
         {
