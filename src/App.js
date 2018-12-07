@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Projects from './Components/Projects'
+import Resume from './Components/Resume'
 import './App.css';
 
 class App extends Component {
@@ -28,8 +29,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        My Website
+        
         <Projects projects={this.state.projects}/>
+        <Resume />
       </div>
     );
   }
