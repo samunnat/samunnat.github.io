@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Home from './Components/Home'
 import Projects from './Components/Projects'
 import Resume from './Components/Resume'
 import './App.css';
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+        <Home />
         <Projects projects={this.state.projects}/>
         <Resume />
       </div>
