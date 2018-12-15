@@ -6,17 +6,27 @@
 }
 
 #Intro {
-    height: 37vh;
+    height: 50vh;
 }
 
 #About {
-    height: 63vh;
+    height: 50vh;
     background-color: #303436;
 }
 
 .info_links {
-    display: flex;
+    display: table-cell;
     justify-content: space-between;
     width: 20%;
     margin: auto;
+}
+
+.info_links > * {
+    margin: 1em;
+    vertical-align: middle;
+}
+
+#hobbies > li {
+    margin:1em;
+    line-height: 1.5em;
 }
