@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Button, Container, Divider, Grid, Header, Image, Menu, Segment, Icon } from 'semantic-ui-react'
+import { Button, Container, Header, Icon, Image } from 'semantic-ui-react'
 
-class Home extends Component {
+class Intro extends Component {
   render() {
     // TODO: need to fix anchor tags since they overflow outside the icons
     return (
-        <Container className='center aligned'>
-            <Image src="/avatar.jpg" alt="avatar" className="ui avatar small image"/>
+        <Container className='center aligned' style={{padding: '0.5em 0.5em 0.5em 0.5em'}}>
+            <Image src="/avatar.jpg" alt="avatar" className="ui avatar small image" />
 
-            <Header size='huge' style={{color: 'lightgray'}}>Samunnat Lamichhane</Header>
+            <Header size='huge' style={{color: 'lightgray', margin: '0.4em'}}>Samunnat Lamichhane</Header>
 
             <div className="info_links">
 
@@ -16,7 +16,7 @@ class Home extends Component {
                 <Icon name="github" color='violet' size="big" link />
               </a>
 
-              <a href="/resume.pdf" rel="noopener noreferrer" target = "_blank">
+              <a href="/sam_resume.pdf" rel="noopener noreferrer" target = "_blank">
                 <Button compact color='teal' size='tiny'>resume</Button>
               </a>
 
@@ -29,4 +29,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Intro;

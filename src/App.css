@@ -2,15 +2,16 @@
     height:100vh;
 
     background-color: #2E3233;
+    display: block;
 }
 
-.intro {
-    border: 1px red solid;
+#intro {
+    background-color: #000000;
 }
 
 .info_links {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 25%;
     margin: auto;
 }

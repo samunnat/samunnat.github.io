@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Home from './Components/Home'
+import Intro from './Components/Intro'
 import Projects from './Components/Projects'
-import Resume from './Components/Resume'
 import './App.css';
 
 class App extends Component {
@@ -30,9 +29,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home />
+        <Intro id="intro"/>
         <Projects projects={this.state.projects}/>
-        <Resume />
       </div>
     );
   }
