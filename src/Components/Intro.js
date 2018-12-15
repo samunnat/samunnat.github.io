@@ -5,10 +5,11 @@ class Intro extends Component {
   render() {
     // TODO: need to fix anchor tags since they overflow outside the icons
     return (
+      <div id="Intro">
         <Container className='center aligned' style={{padding: '0.5em 0.5em 0.5em 0.5em'}}>
             <Image src="/avatar.jpg" alt="avatar" className="ui avatar small image" />
 
-            <Header size='huge' style={{color: 'lightgray', margin: '0.4em'}}>Samunnat Lamichhane</Header>
+            <Header size='huge' style={{color: 'lightgray', margin: '0.45em'}}>Samunnat Lamichhane</Header>
 
             <div className="info_links">
 
@@ -25,6 +26,7 @@ class Intro extends Component {
               </a>
             </div>
         </Container>
+      </div>
     );
   }
 }

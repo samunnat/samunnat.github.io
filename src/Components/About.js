@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import { Button, Container, Header, Icon, Image } from 'semantic-ui-react'
 
 class About extends Component {
   render() {
-    <p>About</p>
+    return (
+      <div id="About">
+        <Container>
+          <Header></Header>
+        </Container>
+      </div>
+    );
   }
 }
 

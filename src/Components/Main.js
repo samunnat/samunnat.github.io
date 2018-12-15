@@ -1,20 +1,25 @@
+/*
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import { NavTab } from 'react-router-tabs';
 
-import LandingPage from './home';
-import AboutMe from './about';
-import Contact from './contact';
-import Projects from './projects';
-import Resume from './resume';
+import About from './About';
+import Projects from './Projects';
 
-
-const Main = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/about" component={AboutMe} />
-    <Route path="/projects" component={Projects} />
-    <Route path="/resume" component={Resume} />
-  </Switch>
-)
+const Main = ({ match }) => {
+  return (
+    <div>
+      <Projects/>
+      <NavTab to="/About">About</NavTab>
+      <NavTab to="/Projects">Projects</NavTab>
+ 
+      <Switch>
+        <Route path={`${match.path}/About`} component={About} />
+        <Route path={`${match.path}/Projects`} component={Projects} />
+      </Switch>
+    </div>
+  );
+};
 
 export default Main;
+*/
