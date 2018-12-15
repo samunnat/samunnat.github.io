@@ -3,3 +3,14 @@
 
     background-color: #2E3233;
 }
+
+.intro {
+    border: 1px red solid;
+}
+
+.info_links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+}
