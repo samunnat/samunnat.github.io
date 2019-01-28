@@ -1,34 +1,17 @@
 import React, { Component } from 'react';
 import { Button, Container, Header, Icon, Image } from 'semantic-ui-react'
+import InfoLinks from './InfoLinks'
 
-class Intro extends Component {
-  render() {
-    // TODO: need to fix anchor tags since they overflow outside the icons
-    return (
-      <div id="Intro">
-        <Container className='center aligned' style={{padding: '0.5em 0.5em 0.5em 0.5em'}}>
-            <Image src="/avatar.jpg" alt="avatar" className="ui avatar small image" />
+const About = () => (
+  <div id="Intro">
+    <Container className='center aligned' style={{padding: '0.5em 0.5em 0.5em 0.5em'}}>
+        <Image src="/avatar.jpg" alt="avatar" className="ui avatar small image" disabled/>
 
-            <Header as='h1' style={{color: 'lightgray', margin: '0.45em', fontSize: "4em"}}>Samunnat Lamichhane</Header>
+        <Header as='h1' style={{color: 'lightgray', margin: '0.45em', fontSize: "4em"}}>Sam Lamichhane</Header>
 
-            <div className="info_links">
+        <InfoLinks />
+    </Container>
+  </div>
+)
 
-              <a href="https://github.com/samunnat" rel="noopener noreferrer" target="_blank">
-                <Icon name="github" color='violet' size="huge" link />
-              </a>
-
-              <a href="/sam_resume.pdf" rel="noopener noreferrer" target = "_blank">
-                <Button compact color='teal' size='huge'>resume</Button>
-              </a>
-
-              <a href="https://www.linkedin.com/in/samunnatlamichhane" rel="noopener noreferrer" target="_blank">
-                <Icon name="linkedin" color='blue' size="huge" link />
-              </a>
-            </div>
-        </Container>
-      </div>
-    );
-  }
-}
-
-export default Intro;
+export default About;

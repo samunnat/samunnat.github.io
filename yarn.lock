@@ -742,9 +742,9 @@
     regenerator-runtime "^0.12.0"
 
 "@babel/runtime@^7.1.2":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.2.0.tgz#b03e42eeddf5898e00646e4c840fa07ba8dcad7f"
-  integrity sha512-oouEibCbHMVdZSDlJBO6bZmID/zA/G/Qx3H1d3rSNPTD+L8UNKvCat7aKWSJ74zYbm5zWGh0GQN0hKj8zYFTCg==
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
+  integrity sha512-7jGW8ppV0ant637pIqAcFfQDDH1orEPGJb8aXfUozuCU3QqX7rX4DA8iwrbPrR1hcH0FTTHz47yQnk+bl5xHQA==
   dependencies:
     regenerator-runtime "^0.12.0"
 
@@ -799,7 +799,7 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
   integrity sha512-yprFYuno9FtNsSHVlSWd+nRlmGoAbqbeCwOryP6sC/zoCjhpArcRMYp19EvpSUSizJAlsXEwJv+wcWS9XaXdMw==
 
-"@semantic-ui-react/event-stack@^3.0.0":
+"@semantic-ui-react/event-stack@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@semantic-ui-react/event-stack/-/event-stack-3.0.1.tgz#41d0b095ac94cc5e1607a4fed4d0f8860d0d2e60"
   integrity sha512-9YNRr0z9GEvk/yvIzAzv0sbYa/FPrtWTYibu+chJ0CEMQjYDjUdRSqtxXOvP0eM6kZjD1G/Oy1LhPiHG7DRHsg==
@@ -5623,9 +5623,9 @@ jsx-ast-utils@^2.0.1:
     array-includes "^3.0.3"
 
 keyboard-key@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.0.2.tgz#212e14dde4c2059814336159bbc5acd0a348ca6b"
-  integrity sha512-05cjQmw4ss/YuY2utmVim0wywDyBZGUivo8siLPkWinwGWtKlO8/4RGbPUqNycwlD3u/3D15eNRjnNAyaTDs8g==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.0.4.tgz#52d8fa07b7e17757072aa22a67fb4ae85e4c46b0"
+  integrity sha512-my04dE6BCwPpwoe4KYKfPxWiwgDYQOHrVmtzn1CfzmoEsGG/ef4oZGaXCzi1+iFhG7CN5JkOuxmei5OABY8/ag==
 
 killable@^1.0.0:
   version "1.0.1"
@@ -8435,16 +8435,16 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.5"
 
-semantic-ui-react@^0.83.0:
-  version "0.83.0"
-  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.83.0.tgz#3437d77bfd3d1e44d61e78d5740c262b9e63f258"
-  integrity sha512-rPW4TZwbDJRJZeKxCpYuNiRnBwUpWeDkZ/yF3j5iLNS8hZ6yOjoFFmqGohqpqKD+jVyzlxz2NCmah54mwbNGOw==
+semantic-ui-react@^0.84.0:
+  version "0.84.0"
+  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.84.0.tgz#43f908fd547b1e8b2b108675a93cd7d7460bcdbe"
+  integrity sha512-OOqdtH+hBxVlh/lQa+zet9MEPcA8cBUo7ePVYZhx82hwF5Ky47FiWrgLk3ZSNie7bb4VkuiuLR9y5cY0EooRlw==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    "@semantic-ui-react/event-stack" "^3.0.0"
+    "@semantic-ui-react/event-stack" "^3.0.1"
     classnames "^2.2.6"
     keyboard-key "^1.0.2"
-    lodash "^4.17.10"
+    lodash "^4.17.11"
     prop-types "^15.6.2"
     shallowequal "^1.1.0"
 
