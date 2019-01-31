@@ -3,37 +3,40 @@ import { Button } from 'semantic-ui-react'
 
 const InfoLinks = () => (
     <div className="info_links">
+        <Button.Group>
+            <Button 
+                content='Resume'
+                icon='address card outline'
+                color='vk'
+                size='small'
 
-        <Button 
-            content='Resume'
-            icon='address card outline'
-            color='orange' inverted
-            size='small'
+                href='/resume.pdf'
+            />
 
-            href='/sam_resume.pdf'
-        />
+            <Button
+                content='Github'
+                icon='github'
+                color='github'
+                size='small'
 
-        <Button
-            content='Github'
-            icon='github'
-            color='github' inverted
-            size='small'
+                href='https://github.com/samunnat'
+                rel='noopener noreferrer'
+                target='_blank'
+            />
 
-            href='https://github.com/samunnat'
-            rel='noopener noreferrer'
-            target='_blank'
-        />
+            <Button
+                content='LinkedIn'
+                icon='linkedin'
+                color='linkedin' 
+                size='small'
 
-        <Button
-            content='LinkedIn'
-            icon='linkedin'
-            color='blue' inverted
-            size='small'
+                href='https://www.linkedin.com/in/samunnatlamichhane'
+                rel='noopener noreferrer'
+                target='_blank'
+            />
 
-            href='https://www.linkedin.com/in/samunnatlamichhane'
-            rel='noopener noreferrer'
-            target='_blank'
-        />
+
+        </Button.Group>
     </div>
 )
 
