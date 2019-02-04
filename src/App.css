@@ -1,32 +1,10 @@
 .App {
     height:100vh;
 
-    background-color: #181a1b;
+    background-color: #303436;
     display: block;
 }
 
 #Intro {
-    height: 50vh;
-}
-
-#About {
-    height: 50vh;
-    background-color: #303436;
-}
-
-.info_links {
-    display: table-cell;
-    justify-content: space-between;
-    width: 20%;
-    margin: auto;
-}
-
-.info_links > * {
-    margin: 1em;
-    vertical-align: middle;
-}
-
-#hobbies > li {
-    margin:1em;
-    line-height: 1.5em;
+    background-color: #181a1b;
 }

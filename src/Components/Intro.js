@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Button, Container, Header, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import { Container, Header, Image } from 'semantic-ui-react'
 import InfoLinks from './InfoLinks'
 
 const Intro = () => (
