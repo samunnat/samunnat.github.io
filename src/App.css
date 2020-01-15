@@ -1,10 +1,8 @@
 .App {
     height:100vh;
-
-    background-color: #303436;
     display: block;
 }
 
 #Intro {
-    background-color: #181a1b;
+    background-color: black;
 }

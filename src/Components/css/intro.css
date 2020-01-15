@@ -1,0 +1,11 @@
+#image {
+    /* border: 3px solid white;
+    border-style: solid; */
+    box-shadow: 0 0 5px 5px gray, inset 0 0 5px 2px gray;
+}
+
+#name {
+    color: white;
+    font-family: 'Courier';
+    text-decoration: none;
+}

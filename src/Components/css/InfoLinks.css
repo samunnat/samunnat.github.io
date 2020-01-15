@@ -1,0 +1,37 @@
+#infoLinks .linkButton {
+    margin: 6px;
+    border-radius: 10px;
+    background-color: #20242c;
+    font-family: 'Courier';
+}
+
+#infoLinks .linkButton:hover {
+    background-color: #4b5468;
+}
+
+#resume {
+    color: yellow;
+    border: 3px solid yellow;
+}
+
+#resume:hover {
+    box-shadow: 0 0 3px 1px yellow, inset 0 0 3px 1px yellow;
+}
+
+#github {
+    color: white;
+    border: 3px solid white;
+}
+
+#github:hover {
+    box-shadow: 0 0 3px 1px white, inset 0 0 3px 1px white;
+}
+
+#linkedin {
+    color: cyan;
+    border: 3px solid cyan;
+}
+
+#linkedin:hover {
+    box-shadow: 0 0 3px 1px cyan, inset 0 0 3px 1px cyan;
+}

@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import Intro from './Components/Intro'
-import About from './Components/About'
+import { BrowserRouter } from 'react-router-dom';
+import Intro from './components/Intro';
+import TabPages from './components/TabPages';
 import './App.css';
+
+var b = 'what-the-hex-dark';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div 
+        className="App"
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/${b}/${b}.png`}}
+      >
         <Intro />
-        
-        <About />
+        <BrowserRouter>
+          <TabPages />
+        </BrowserRouter>
       </div>
     );
   }
