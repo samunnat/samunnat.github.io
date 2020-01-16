@@ -4,14 +4,14 @@ import Intro from './components/Intro';
 import TabPages from './components/TabPages';
 import './App.css';
 
-var b = 'what-the-hex-dark';
+const backg = 'prism';
 
 class App extends Component {
   render() {
     return (
       <div 
         className="App"
-        style={{backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/${b}/${b}.png`}}
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/${backg}/${backg}.png`}}
       >
         <Intro />
         <BrowserRouter>

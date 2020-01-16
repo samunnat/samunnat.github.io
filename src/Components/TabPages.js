@@ -4,7 +4,7 @@ import { Tab } from 'semantic-ui-react'
 import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
-import './css/SideMenu.css'
+import './css/TabPages.css'
 
 const panes = [
     { 
@@ -17,7 +17,7 @@ const panes = [
             icon: 'hand spock' 
         },
         render: () => (
-            <Route path='/' exact>
+            <Route path={['/', '/home']} exact>
                 <Tab.Pane>
                     <Home/>
                 </Tab.Pane>
@@ -59,29 +59,55 @@ const panes = [
 ];
 
 class TabPages extends Component {
-    render() {
-        const defaultActiveIndex = panes.findIndex(pane => {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeTab: this.getCurrentTabIndex()
+        }
+    }
+
+    getCurrentTabIndex() {
+        return panes.findIndex(pane => {
             return !!matchPath(window.location.pathname, {
                 path: pane.menuItem.to,
                 exact: true
             });
         });
+    }
 
+    componenentDidUpdate() {
+        this._isMounted = true;
+        window.onpopstate = () => {
+            if (this._isMounted) {
+                console.log("detected back");
+                this.setState({
+                    activeTab: this.getCurrentTabIndex()
+                });
+            }
+        }
+    }
+
+    render() {
         return (
             <BrowserRouter>
                 <Tab 
-                    defaultActiveIndex={defaultActiveIndex} 
+                    activeIndex={this.state.activeIndex}
                     menu={{ 
                         fluid: true, 
                         vertical: true, 
-                        tabular: 'left', 
+                        tabular: true, 
                         color: 'teal',
-                        inverted: 'true' 
+                        size: 'large',
+                        attached: true,
+                        inverted: true 
                     }} 
+                    size='large'
                     panes={panes}
+                    onTabChange ={this.handleChange}
                 />
             </BrowserRouter>
         );
     }
 }
+
 export default TabPages;
