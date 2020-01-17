@@ -17,7 +17,7 @@ const panes = [
             icon: 'hand spock' 
         },
         render: () => (
-            <Route path={['/', '/home']} exact>
+            <Route path='/' exact>
                 <Tab.Pane>
                     <Home/>
                 </Tab.Pane>
@@ -33,7 +33,7 @@ const panes = [
             icon: 'code branch'
         },
         render: () => (
-            <Route path='/projects' exact>
+            <Route path='/projects'>
                 <Tab.Pane> 
                     <Projects/>
                 </Tab.Pane>
@@ -49,7 +49,7 @@ const panes = [
             icon: 'mail'
         },
         render: () => (
-            <Route path='/contact' exact>
+            <Route path='/contact'>
                 <Tab.Pane>
                     <Contact/> 
                 </Tab.Pane>
@@ -62,7 +62,17 @@ class TabPages extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeTab: this.getCurrentTabIndex()
+            activeTab: this.getCurrentTabIndex(),
+        }
+    }
+
+    handleTabChange = (e, { activeIndex }) => this.setState({ activeTab: activeIndex })
+
+    componentDidUpdate() {
+        window.onpopstate = (e) => {
+            this.setState({
+                activeTab: this.getCurrentTabIndex()
+            })
         }
     }
 
@@ -75,23 +85,11 @@ class TabPages extends Component {
         });
     }
 
-    componenentDidUpdate() {
-        this._isMounted = true;
-        window.onpopstate = () => {
-            if (this._isMounted) {
-                console.log("detected back");
-                this.setState({
-                    activeTab: this.getCurrentTabIndex()
-                });
-            }
-        }
-    }
-
     render() {
         return (
             <BrowserRouter>
                 <Tab 
-                    activeIndex={this.state.activeIndex}
+                    activeIndex={this.state.activeTab}
                     menu={{ 
                         fluid: true, 
                         vertical: true, 
@@ -103,7 +101,7 @@ class TabPages extends Component {
                     }} 
                     size='large'
                     panes={panes}
-                    onTabChange ={this.handleChange}
+                    onTabChange={this.handleTabChange}
                 />
             </BrowserRouter>
         );
