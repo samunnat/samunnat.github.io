@@ -13,8 +13,7 @@ const panes = [
             to: '/',
             exact: true,
             key: 'Home', 
-            color: 'brown',
-            icon: 'hand spock' 
+            icon: 'hand spock olive' 
         },
         render: () => (
             <Route path='/' exact>
@@ -30,8 +29,7 @@ const panes = [
             content: 'Projects',
             to: '/projects',
             key: 'Projects', 
-            color: 'olive',
-            icon: 'code branch'
+            icon: 'code branch yellow'
         },
         render: () => (
             <Route path='/projects'>
@@ -47,8 +45,7 @@ const panes = [
             content: 'Contact',
             to: '/contact',
             key: 'Contact',
-            color: 'violet',
-            icon: 'mail'
+            icon: 'mail red'
         },
         render: () => (
             <Route path='/contact'>
@@ -94,13 +91,11 @@ class TabPages extends Component {
                     <Tab 
                         activeIndex={this.state.activeTab}
                         menu={{ 
-                            fluid: true, 
-                            vertical: true, 
-                            tabular: true,
-                            size: 'medium',
+                            fluid: false,
+                            attached: true,
+                            tabular: false,
+                            size: 'large',
                             inverted: true,
-                            attached: false,
-                            pointing: true
                         }} 
                         size='large'
                         panes={panes}

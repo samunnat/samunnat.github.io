@@ -32,12 +32,10 @@ const projectCards = [
     }
 ]
 
-class Projects extends React.Component {
-    render() {
-        return (
-            <Card.Group items={projectCards} itemsPerRow={3} doubling={true} textAlign='center'/>
-        );
-    }
+const Projects = () => {
+    return (
+        <Card.Group items={projectCards} itemsPerRow={3} doubling={true} textAlign='center'/>
+    );
 }
 
 export default Projects;

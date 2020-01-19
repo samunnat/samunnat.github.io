@@ -4,11 +4,11 @@ import './css/InfoLinks.css'
 
 const InfoLinks = () => (
     <Container id="infoLinks">
-        <Button.Group attached style={{display: 'inline-block'}}>
+        <Button.Group compact color='black' style={{display: 'inline-block'}}>
             <Button
                 className='linkButton'
                 id='resume'
-                icon='address card outline big'
+                icon='address card outline large teal'
                 href='https://drive.google.com/open?id=1_Mpr3uOrL-YShl1i5Mv7f_KzBsISoF4j'
                 rel='noopener noreferrer'
                 target='_blank'
@@ -16,17 +16,17 @@ const InfoLinks = () => (
             
             <Button
                 className='linkButton'
-                id='github'
-                icon='github big'
+                id='github grey'
+                icon='github large'
                 href='https://github.com/samunnat'
                 rel='noopener noreferrer'
                 target='_blank'
             />
-
+            
             <Button
                 className='linkButton'
                 id='linkedin'
-                icon='linkedin big'
+                icon='linkedin large blue'
                 href='https://www.linkedin.com/in/samunnatlamichhane'
                 rel='noopener noreferrer'
                 target='_blank'
