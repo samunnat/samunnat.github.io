@@ -1,29 +1,23 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react'
+import { Container, Button } from 'semantic-ui-react'
 import './css/InfoLinks.css'
 
 const InfoLinks = () => (
-    <div id="infoLinks">
-        <Button.Group className='linkButtonGroup'>
-            <Button 
+    <Container id="infoLinks">
+        <Button.Group attached style={{display: 'inline-block'}}>
+            <Button
                 className='linkButton'
                 id='resume'
-                content='Resume'
-                icon='address card outline'
-                size='small'
-
+                icon='address card outline big'
                 href='https://drive.google.com/open?id=1_Mpr3uOrL-YShl1i5Mv7f_KzBsISoF4j'
                 rel='noopener noreferrer'
                 target='_blank'
             />
-
+            
             <Button
                 className='linkButton'
                 id='github'
-                content='GitHub'
-                icon='github'
-                size='small'
-
+                icon='github big'
                 href='https://github.com/samunnat'
                 rel='noopener noreferrer'
                 target='_blank'
@@ -32,16 +26,13 @@ const InfoLinks = () => (
             <Button
                 className='linkButton'
                 id='linkedin'
-                content='LinkedIn'
-                icon='linkedin'
-                size='small'
-                
+                icon='linkedin big'
                 href='https://www.linkedin.com/in/samunnatlamichhane'
                 rel='noopener noreferrer'
                 target='_blank'
             />
         </Button.Group>
-    </div>
+    </Container>
 )
 
 export default InfoLinks;

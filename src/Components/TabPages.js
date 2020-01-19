@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink, matchPath } from 'react-router-dom';
-import { Tab } from 'semantic-ui-react'
+import { Tab, Container } from 'semantic-ui-react'
 import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
-import './css/TabPages.css'
 
 const panes = [
     { 
@@ -14,6 +13,7 @@ const panes = [
             to: '/',
             exact: true,
             key: 'Home', 
+            color: 'brown',
             icon: 'hand spock' 
         },
         render: () => (
@@ -30,6 +30,7 @@ const panes = [
             content: 'Projects',
             to: '/projects',
             key: 'Projects', 
+            color: 'olive',
             icon: 'code branch'
         },
         render: () => (
@@ -46,6 +47,7 @@ const panes = [
             content: 'Contact',
             to: '/contact',
             key: 'Contact',
+            color: 'violet',
             icon: 'mail'
         },
         render: () => (
@@ -87,23 +89,25 @@ class TabPages extends Component {
 
     render() {
         return (
-            <BrowserRouter>
-                <Tab 
-                    activeIndex={this.state.activeTab}
-                    menu={{ 
-                        fluid: true, 
-                        vertical: true, 
-                        tabular: true, 
-                        color: 'teal',
-                        size: 'large',
-                        attached: true,
-                        inverted: true 
-                    }} 
-                    size='large'
-                    panes={panes}
-                    onTabChange={this.handleTabChange}
-                />
-            </BrowserRouter>
+            <Container>
+                <BrowserRouter>
+                    <Tab 
+                        activeIndex={this.state.activeTab}
+                        menu={{ 
+                            fluid: true, 
+                            vertical: true, 
+                            tabular: true,
+                            size: 'medium',
+                            inverted: true,
+                            attached: false,
+                            pointing: true
+                        }} 
+                        size='large'
+                        panes={panes}
+                        onTabChange={this.handleTabChange}
+                    />
+                </BrowserRouter>
+            </Container>
         );
     }
 }

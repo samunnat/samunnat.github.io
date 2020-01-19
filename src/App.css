@@ -1,8 +1,7 @@
-.App {
-    height:100vh;
+#App {
+    height: 100vh;
+    width: auto;
     display: block;
-}
-
-#Intro {
-    background-color: black;
+    margin: 0;
+    padding: 0;
 }

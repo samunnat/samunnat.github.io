@@ -1,5 +1,12 @@
+#infoLinks {
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    zoom: 1;
+}
+
 #infoLinks .linkButton {
-    margin: 6px;
+    margin: 4px;
     border-radius: 10px;
     background-color: #20242c;
     font-family: 'Courier';

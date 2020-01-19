@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { Segment, Grid } from 'semantic-ui-react';
 import Intro from './components/Intro';
 import TabPages from './components/TabPages';
 import './App.css';
 
-const backg = 'prism';
-
 class App extends Component {
   render() {
+    const backg = 'prism';
     return (
-      <div 
-        className="App"
+      <Segment 
+        id="App"
         style={{backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/${backg}/${backg}.png`}}
       >
-        <Intro />
-        <BrowserRouter>
-          <TabPages />
-        </BrowserRouter>
-      </div>
+        <Grid id="main">
+          <Grid.Column>
+            <Grid.Row>
+              <Intro />
+            </Grid.Row>
+
+            <Grid.Row>
+              <TabPages />
+            </Grid.Row>
+          </Grid.Column>
+        </Grid>
+      </Segment>
     );
   }
 }
