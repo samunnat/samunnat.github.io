@@ -14,12 +14,13 @@ const projectCards = [
         meta: 'Group',
         description: 'Geovisualization of language distribution across ingested tweets.',
         style: { backgroundColor: '#e6ffff' },
-        href: 'https://github.com/CUBigDataClass/Twingua',
         extra: (
             <div>
+                <a href='https://github.com/CUBigDataClass/Twingua' rel='noopener noreferrer' target='_blank'>
+                    <Icon name='github' color='grey' size='large'/>
+                </a> 
                 <a href='https://www.youtube.com/watch?v=uWDh2CGj-ao&feature=youtu.be' rel='noopener noreferrer' target='_blank'>
-                    <Icon name='youtube' color='red' size='large' link='true'/>
-                    Demo
+                    <Icon name='youtube' color='red' size='large'/>
                 </a> 
             </div>
         )
@@ -28,7 +29,7 @@ const projectCards = [
 
 const Projects = () => {
     return (
-        <Card.Group color='red' inverted items={projectCards} itemsPerRow={3} doubling={true} centered/>
+        <Card.Group items={projectCards} itemsPerRow={3} doubling={true} centered/>
     );
 }
 

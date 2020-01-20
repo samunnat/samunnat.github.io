@@ -1,33 +1,40 @@
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
-import './css/Home.css'
-
-const myInfo = {
-    name: 'Sam Lamichhane',
-    city: 'Boulder, CO',
-    interests: [
-        'Web Dev', 'Big-Data Analytics', 'Automation'
-    ],
-    hobbies: {
-        'reading': {
-            'genres': ['Science Fiction, Fantasy, Tech'],
-            'favorites': ['Dune', 'A Song of Ice and Fire', 'Clean Code' ]
-        },
-        'hiking': 'anywhere with a view',
-    },
-};
+import './css/Home.css';
 
 const Home = () => {
     return (
         <Container>
-            <Header color='olive' inverted textAlign='center'>
-                Ahoy-hoy! I'm a senior undergrad at CU Boulder majoring in CompSci.
+            <Header color='olive' inverted>
+                Ahoy-hoy! I'm a senior undergrad at CU Boulder majoring in CompSci. <br/><br/>
+                I'm interested in Full-Stack Web Dev, Big-Data Infrastructure, and Automation.
             </Header>
-            <pre>
-                <span class='innerPre'>
-                {JSON.stringify(myInfo, null, 4)}
-                </span>
-            </pre>
+            <Header color='olive' inverted>
+                In my free time, I like to:
+                    <ul>
+                        <li>
+                            Read
+                            <ul>
+                                <li>Sci-Fi, Fantasy, Tech</li>
+                                <li>Favorites: 
+                                    <ul>
+                                        <li>Dune</li>
+                                        <li>A Storm of Swords</li>
+                                        <li>Clean Code</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Hike
+                            <ul>
+                                <li>
+                                    anywhere with a view
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+            </Header>
         </Container>
     );
 }
