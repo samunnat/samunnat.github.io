@@ -1,50 +1,49 @@
 import React from 'react';
 import { Container, Header, List } from 'semantic-ui-react';
-import './css/Home.css';
+import './css/Home.css'
+
+const Hobbies = () => {
+    return (
+        <List size='big' verticalAlign='middle' celled relaxed horizontal centered inverted>
+            <List.Header as={Header} size='medium' color='olive' inverted>Hobbies:</List.Header>
+            <List.Item className='hobby'>
+                <List.Icon name='book' color='olive' inverted/>
+                <List.Content>
+                    <List.Header>Read</List.Header>
+                    <List.Description>Fantasy, Sci-Fi, Tech</List.Description>
+                    <List.Description>ASOIAF, Dune, Clean Code</List.Description>
+                </List.Content>
+            </List.Item>
+            <List.Item className='hobby'>
+                <List.Icon name='picture' color='olive' inverted/>
+                <List.Content>
+                    <List.Header>Hike</List.Header>
+                    <List.Description>anywhere with a view</List.Description>
+                </List.Content>
+            </List.Item>
+            <List.Item className='hobby'>
+                <List.Icon name='bicycle' color='olive' inverted/>
+                <List.Content>
+                    <List.Header>Bike</List.Header>
+                    <List.Description>preferably downhill</List.Description>
+                </List.Content>
+            </List.Item>
+        </List>
+    );
+}
 
 const Home = () => {
     return (
-        <Container>
+        <Container textAlign='center' style={{padding: '10px'}}>
             <Header color='olive' inverted>
                 Ahoy-hoy! I'm a senior undergrad at CU Boulder majoring in CompSci.
             </Header>
+
             <Header as='h3' color='olive' inverted>
-                I'm interested in Full-Stack Web Dev, Big-Data Architecture, and Automation.
+                I'm interested in Full-Stack Web Development, Big-Data Architecture, and Automation.
             </Header>
-            <List color='olive' inverted>
-                <List.Header as={Header} color='olive' inverted>
-                    In my free time, I like to:
-                </List.Header>
-                <List.Item>
-                    <List.Header>Test</List.Header>
-                </List.Item>
-                <List.Item>
-                    <List.Header>Test2</List.Header>
-                </List.Item>
-            </List>
-                {/* <ul>
-                    <li>
-                        Read
-                        <ul>
-                            <li>Sci-Fi, Fantasy, Tech</li>
-                            <li>Favorites: 
-                                <ul>
-                                    <li>Dune</li>
-                                    <li>A Storm of Swords</li>
-                                    <li>Clean Code</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        Hike
-                        <ul>
-                            <li>
-                                anywhere with a view
-                            </li>
-                        </ul>
-                    </li>
-                </ul> */}
+            
+            <Hobbies/>
         </Container>
     );
 }
