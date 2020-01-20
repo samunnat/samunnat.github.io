@@ -8,7 +8,7 @@ const InfoLinks = () => (
             <Button
                 className='linkButton'
                 id='resume'
-                icon='address card outline large teal'
+                icon={{ name: 'file alternate', color: 'teal', size: 'large'}}
                 href='https://drive.google.com/open?id=1_Mpr3uOrL-YShl1i5Mv7f_KzBsISoF4j'
                 rel='noopener noreferrer'
                 target='_blank'
@@ -17,7 +17,7 @@ const InfoLinks = () => (
             <Button
                 className='linkButton'
                 id='github grey'
-                icon='github large'
+                icon={{ name: 'github', color: 'grey', size: 'large'}}
                 href='https://github.com/samunnat'
                 rel='noopener noreferrer'
                 target='_blank'
@@ -26,7 +26,7 @@ const InfoLinks = () => (
             <Button
                 className='linkButton'
                 id='linkedin'
-                icon='linkedin large blue'
+                icon={{ name: 'linkedin', color: 'blue', size: 'large'}}
                 href='https://www.linkedin.com/in/samunnatlamichhane'
                 rel='noopener noreferrer'
                 target='_blank'

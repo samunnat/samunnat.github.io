@@ -13,11 +13,11 @@ const panes = [
             to: '/',
             exact: true,
             key: 'Home', 
-            icon: 'hand spock olive' 
+            icon: { name: 'hand spock', color: 'olive' }
         },
         render: () => (
             <Route path='/' exact>
-                <Tab.Pane>
+                <Tab.Pane color='black' inverted>
                     <Home/>
                 </Tab.Pane>
             </Route>
@@ -29,11 +29,11 @@ const panes = [
             content: 'Projects',
             to: '/projects',
             key: 'Projects', 
-            icon: 'code branch yellow'
+            icon: { name: 'code branch', color: 'yellow' }
         },
         render: () => (
             <Route path='/projects'>
-                <Tab.Pane> 
+                <Tab.Pane color='black' inverted> 
                     <Projects/>
                 </Tab.Pane>
             </Route>
@@ -45,11 +45,11 @@ const panes = [
             content: 'Contact',
             to: '/contact',
             key: 'Contact',
-            icon: 'mail red'
+            icon: { name: 'paper plane', color: 'orange' }
         },
         render: () => (
             <Route path='/contact'>
-                <Tab.Pane>
+                <Tab.Pane color='black' inverted>
                     <Contact/> 
                 </Tab.Pane>
             </Route>
@@ -92,10 +92,13 @@ class TabPages extends Component {
                         activeIndex={this.state.activeTab}
                         menu={{ 
                             fluid: false,
-                            attached: true,
+                            attached: false,
                             tabular: false,
                             size: 'large',
                             inverted: true,
+                            widths: 3,
+                            borderless: true,
+                            color: 'black',
                         }} 
                         size='large'
                         panes={panes}

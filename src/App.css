@@ -1,5 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 #App {
     min-height: 100vh;
+    border-radius: 0px;
     width: auto;
     display: block;
     margin: 0;

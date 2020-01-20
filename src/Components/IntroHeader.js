@@ -4,7 +4,7 @@ import InfoLinks from './InfoLinks'
 import TextScramble from './utils/TextScramble'
 import './css/Intro.css'
 
-class Intro extends React.Component {
+class IntroHeader extends React.Component {
   animateName() {
     const el = document.querySelector('#name')
     el.textContent = 'ॐ'
@@ -19,17 +19,17 @@ class Intro extends React.Component {
   render() {
     const backg = 'random_grey_variations';
     return (
-      <Segment id='intro' textAlign='center' text
-       style={{
-         backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/${backg}/${backg}.png`
+      <Segment id='introHeader' textAlign='center'
+        style={{
+         backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/${backg}/${backg}.png)`
         }}
       >
-        <Image id='image' src='/avatar.jpg' alt='avatar' className='ui avatar small image'/>
-        <Header as='h1' id='name' textAlign='center' onMouseEnter={this.animateName}></Header>
+        <Image id='image' src='/avatar.jpg' alt='avatar' className='ui avatar small image' bordered/>
+        <Header as='h1' id='name' textAlign='center' onClick={this.animateName}></Header>
         <InfoLinks />
       </Segment>
     );
   }
 }
 
-export default Intro;
+export default IntroHeader;

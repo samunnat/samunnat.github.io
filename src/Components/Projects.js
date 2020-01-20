@@ -1,40 +1,34 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Header, Icon } from 'semantic-ui-react';
 
 const projectCards = [
     {
-        image: { src: "https://neilpatel.com/wp-content/uploads/2018/12/google.jpg" },
-        header: 'Test1',
+        header: { content: 'EaseLease', as: Header },
         meta: 'Solo',
-        description: 'Desc1',
-        color: 'grey'
+        description: 'Website to [rent]/[rent out] stuff.',
+        style: { backgroundColor: '#e6ffff' },
+        href: 'https://github.com/samunnat/EaseLease'
     },
     {
-        header: 'Test1',
-        description: 'Desc1',
-        icon: 'user',
-        color: 'grey',
-        meta: 'Group'
+        header: { content: 'Twingua', as: Header },
+        meta: 'Group',
+        description: 'Geovisualization of language distribution across ingested tweets.',
+        style: { backgroundColor: '#e6ffff' },
+        href: 'https://github.com/CUBigDataClass/Twingua',
+        extra: (
+            <div>
+                <a href='https://www.youtube.com/watch?v=uWDh2CGj-ao&feature=youtu.be' rel='noopener noreferrer' target='_blank'>
+                    <Icon name='youtube' color='red' size='large' link='true'/>
+                    Demo
+                </a> 
+            </div>
+        )
     },
-    {
-        header: 'Test1',
-        description: 'Desc1',
-        icon: 'user',
-        color: 'grey',
-        meta: 'Group'
-    },
-    {
-        header: 'Test1',
-        description: 'Desc1',
-        icon: 'user',
-        color: 'grey',
-        meta: 'Group'
-    }
 ]
 
 const Projects = () => {
     return (
-        <Card.Group items={projectCards} itemsPerRow={3} doubling={true} textAlign='center'/>
+        <Card.Group color='red' inverted items={projectCards} itemsPerRow={3} doubling={true} centered/>
     );
 }
 
