@@ -3,13 +3,6 @@ import { Card, Header, Icon } from 'semantic-ui-react';
 
 const projectCards = [
     {
-        header: { content: 'EaseLease', as: Header },
-        meta: 'Solo',
-        description: 'Website to [rent]/[rent out] stuff.',
-        style: { backgroundColor: '#e6ffff' },
-        href: 'https://github.com/samunnat/EaseLease'
-    },
-    {
         header: { content: 'Twingua', as: Header },
         meta: 'Group',
         description: 'Geovisualization of language distribution across ingested tweets.',
