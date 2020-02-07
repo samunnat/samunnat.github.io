@@ -27,7 +27,7 @@ const InfoLinks = () => (
                 className='linkButton'
                 id='linkedin'
                 icon={{ name: 'linkedin', color: 'blue', size: 'large'}}
-                href='https://www.linkedin.com/in/samunnatlamichhane'
+                href='https://www.linkedin.com/in/samunnat'
                 rel='noopener noreferrer'
                 target='_blank'
             />

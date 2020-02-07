@@ -7,7 +7,7 @@ import './css/Intro.css'
 class IntroHeader extends React.Component {
   animateName() {
     const el = document.querySelector('#name')
-    el.textContent = 'ॐ'
+    el.textContent = 'Δ'
     const fx = new TextScramble(el)
     fx.setText('SAM LAMICHHANE')
   }

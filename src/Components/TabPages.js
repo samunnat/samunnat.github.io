@@ -1,61 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, NavLink, matchPath } from 'react-router-dom';
+import { HashRouter as Router, Route, NavLink, matchPath } from 'react-router-dom';
 import { Tab, Container } from 'semantic-ui-react'
 import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
-
-const panes = [
-    { 
-        menuItem: { 
-            as: NavLink,
-            content: 'Home',
-            to: '/',
-            exact: true,
-            key: 'Home', 
-            icon: { name: 'hand spock', color: 'olive' }
-        },
-        render: () => (
-            <Route path='/' exact>
-                <Tab.Pane color='black' inverted>
-                    <Home/>
-                </Tab.Pane>
-            </Route>
-        )
-    },
-    { 
-        menuItem: { 
-            as: NavLink,
-            content: 'Projects',
-            to: '/projects',
-            key: 'Projects', 
-            icon: { name: 'code branch', color: 'yellow' }
-        },
-        render: () => (
-            <Route path='/projects'>
-                <Tab.Pane color='black' inverted> 
-                    <Projects/>
-                </Tab.Pane>
-            </Route>
-        )
-    },
-    { 
-        menuItem: {
-            as: NavLink,
-            content: 'Contact',
-            to: '/contact',
-            key: 'Contact',
-            icon: { name: 'paper plane', color: 'orange' }
-        },
-        render: () => (
-            <Route path='/contact'>
-                <Tab.Pane color='black' inverted>
-                    <Contact/> 
-                </Tab.Pane>
-            </Route>
-        )
-    },
-];
 
 class TabPages extends Component {
     constructor(props) {
@@ -65,32 +13,26 @@ class TabPages extends Component {
         }
     }
 
-    handleTabChange = (e, { activeIndex }) => this.setState({ activeTab: activeIndex })
-
-    componentDidUpdate() {
-        window.onpopstate = (e) => {
-            this.setState({
-                activeTab: this.getCurrentTabIndex()
-            })
-        }
+    handleTabChange = (e, { activeIndex }) => {
+        this.setState({ activeTab: activeIndex });
     }
 
     getCurrentTabIndex() {
         let x = panes.findIndex(pane => {
-            return !!matchPath(window.location.pathname, {
+            let currentTo = window.location.hash.slice(1);
+            return !!matchPath(currentTo, {
                 path: pane.menuItem.to,
                 exact: true,
-                strict: true
+                strict: false
             });
         });
-        console.log(x);
-        return x;
+        return (x === -1) ? 0 : x;
     }
 
     render() {
         return (
             <Container>
-                <Router basename={process.env.PUBLIC_URL}>
+                <Router basename='/'>
                     <Tab 
                         activeIndex={this.state.activeTab}
                         menu={{ 
@@ -112,5 +54,60 @@ class TabPages extends Component {
         );
     }
 }
+
+const panes = [
+    { 
+        menuItem: { 
+            as: NavLink,
+            to: '/',
+            exact: true,
+            replace: true,
+            content: 'Home',
+            key: 'Home', 
+            icon: { name: 'hand spock', color: 'olive' }
+        },
+        render: () => (
+            <Route path='/' exact>
+                <Tab.Pane color='black' inverted>
+                    <Home/>
+                </Tab.Pane>
+            </Route>
+        )
+    },
+    { 
+        menuItem: { 
+            as: NavLink,
+            to: '/projects',
+            replace: true,
+            content: 'Projects',
+            key: 'Projects', 
+            icon: { name: 'code branch', color: 'yellow' }
+        },
+        render: () => (
+            <Route path='/projects'>
+                <Tab.Pane color='black' inverted> 
+                    <Projects/>
+                </Tab.Pane>
+            </Route>
+        )
+    },
+    { 
+        menuItem: {
+            as: NavLink,
+            to: '/contact',
+            replace: true,
+            content: 'Contact',
+            key: 'Contact',
+            icon: { name: 'paper plane', color: 'orange' }
+        },
+        render: () => (
+            <Route path='/contact'>
+                <Tab.Pane color='black' inverted>
+                    <Contact/> 
+                </Tab.Pane>
+            </Route>
+        )
+    },
+];
 
 export default TabPages;
