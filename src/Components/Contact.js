@@ -58,7 +58,7 @@ class Contact extends React.Component {
                     <Header size='small' color='orange'>Feel free to ping me at sala6632@colorado.edu.</Header>
                 </Grid.Row>
                 <Grid.Row>
-                    <Form size='medium' widths='equal' inverted>
+                    <Form size='medium' inverted>
                         <Form.Group>
                             <Form.Field 
                                 label='Name' 
