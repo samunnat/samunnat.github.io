@@ -10,13 +10,6 @@ const projectCards = [
         href: 'https://github.com/samunnat/EaseLease'
     },
     {
-        header: { as: Header, content: 'VRBO-IPFS', textAlign: 'center' },
-        meta: 'Group',
-        description: 'A vacation-rental website that stores rich media in IPFS (a peer-to-peer network).',
-        style: { backgroundColor: '#e6ffff' },
-        href: 'https://github.com/varugonda/vrbo-capstone'
-    },
-    {
         header: { as: Header, content: 'Twingua', textAlign: 'center' },
         meta: 'Group',
         description: 'A geovisualization of language distribution across European tweets.',
