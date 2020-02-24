@@ -2,26 +2,9 @@ import React from 'react';
 import { Container, Header, List } from 'semantic-ui-react';
 import './css/Home.css'
 
-const Home = () => {
-    return (
-        <Container textAlign='center' style={{padding: '10px'}}>
-            <Header size='small' color='olive' inverted>
-                Ahoy-hoy! I'm a senior undergrad at CU Boulder majoring in Computer Science.
-            </Header>
-
-            <Header size='small' color='olive' inverted>
-                I'm interested in Full-Stack Web Development, Big-Data Architecture, and Automation.
-            </Header>
-            
-            <Header size='small' color='olive' inverted>My Hobbies:</Header>
-            <Hobbies/>
-        </Container>
-    );
-}
-
 const Hobbies = () => {
     return (
-        <List size='medium' color='olive' verticalAlign='middle' centered='true' celled relaxed horizontal inverted>
+        <List size='small' color='olive' verticalAlign='middle' centered='true' celled relaxed horizontal inverted>
             <List.Item className='hobby'>
                 <List.Icon name='book' color='olive' inverted/>
                 <List.Content>
@@ -44,6 +27,23 @@ const Hobbies = () => {
                 </List.Content>
             </List.Item>
         </List>
+    );
+}
+
+const Home = () => {
+    return (
+        <Container textAlign='center' style={{padding: '10px'}}>
+            <Header size='small' color='olive' inverted>
+                Ahoy-hoy! I'm a senior undergrad at CU Boulder majoring in Computer Science.
+            </Header>
+
+            <Header size='small' color='olive' inverted>
+                I'm interested in Full-Stack Web Development, Big-Data Architecture, and Automation.
+            </Header>
+            
+            <Header size='small' color='olive' inverted>My Hobbies:</Header>
+            <Hobbies/>
+        </Container>
     );
 }
 
