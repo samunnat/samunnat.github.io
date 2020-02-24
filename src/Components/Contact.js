@@ -55,10 +55,10 @@ class Contact extends React.Component {
         return (
             <Grid centered padded='horizontally'>
                 <Grid.Row>
-                    <Header size='medium' color='orange'>Feel free to ping me at sala6632@colorado.edu.</Header>
+                    <Header size='small' color='orange'>Feel free to ping me at sala6632@colorado.edu.</Header>
                 </Grid.Row>
                 <Grid.Row>
-                    <Form size='medium' inverted>
+                    <Form size='small' inverted>
                         <Form.Group>
                             <Form.Field 
                                 label='Name' 

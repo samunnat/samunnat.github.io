@@ -52,7 +52,7 @@ const panes = [
         },
         render: () => (
             <Route path='/contact'>
-                <Tab.Pane as={Segment} color='black' inverted size='mini'>
+                <Tab.Pane as={Segment} color='black' inverted>
                     <Contact/> 
                 </Tab.Pane>
             </Route>
@@ -97,11 +97,10 @@ class TabPages extends Component {
                             compact: true,
                             fluid: true,
                             inverted: true,
-                            size: 'small',
+                            size: 'medium',
                             tabular: false,
                             widths: 3
                         }} 
-                        size='small'
                         panes={panes}
                         onTabChange={this.handleTabChange}
                     />
