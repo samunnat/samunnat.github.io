@@ -34,7 +34,7 @@ const Home = () => {
     return (
         <Container textAlign='center' style={{padding: '10px'}}>
             <Header size='small' color='olive' inverted>
-                Ahoy-hoy! I'm a senior undergrad at CU Boulder majoring in Computer Science.
+                Ahoy-hoy! I'm a software engineer based out of Colorado.
             </Header>
 
             <Header size='small' color='olive' inverted>
